@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<githubzzx752904457.com.gewalademo.view.second.OverlapScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <githubzzx752904457.com.gewalademo.view.second.OverlapHeaderFrameLayout
+            android:id="@+id/fl_header"
+            android:layout_width="match_parent"
+            android:layout_height="266dp">
+
+            <TextView
+                android:id="@+id/tv_header"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#E14141"
+                android:gravity="center"
+                android:text="预告片"
+                android:textColor="@android:color/white"
+                android:textSize="46sp"/>
+        </githubzzx752904457.com.gewalademo.view.second.OverlapHeaderFrameLayout>
+
+        <githubzzx752904457.com.gewalademo.view.second.OverlapLinearLayout
+            android:id="@+id/ll_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/introduce"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="125dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="还有 6 天上映"
+                        android:textSize="12sp"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="谍影重重5"
+                        android:textSize="15sp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The Bourne Supremacy 5"
+                        android:textSize="12sp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="#c1c1c1"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/content0"
+                    android:layout_width="match_parent"
+                    android:layout_height="166dp"
+                    android:layout_marginTop="66dp"
+                    android:background="#c1c1c1"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Content00"
+                        android:textColor="@android:color/white"
+                        android:textSize="36sp"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="100dp"
+                    android:layout_height="132dp"
+                    android:src="@mipmap/logo"
+                    android:scaleType="fitXY"
+                    android:transitionName="iv"
+                    android:layout_marginLeft="10dp"/>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/content1"
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:visibility="invisible"
+                android:background="#E18441">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Content01"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/content2"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:background="#E1C741">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Content02"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/content3"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:background="#B7E141">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Content03"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/content4"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:background="#41E194">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Content04"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/content5"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:background="#4164E1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Content05"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
+            </FrameLayout>
+        </githubzzx752904457.com.gewalademo.view.second.OverlapLinearLayout>
+
+    </RelativeLayout>
+
+</githubzzx752904457.com.gewalademo.view.second.OverlapScrollView>
