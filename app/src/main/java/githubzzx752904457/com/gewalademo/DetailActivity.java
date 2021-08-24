@@ -36,35 +36,20 @@ import githubzzx752904457.com.gewalademo.view.second.OverlapScrollView;
 
 public class DetailActivity extends AppCompatActivity implements BaseRecyclerAdapter.OnItemClickListener {
 
-    @Bind(R.id.recycle_in)
     RecyclerView recycleIn;
-    @Bind(R.id.rlOpen)
     RelativeLayout rlOpen;
-    @Bind(R.id.fl_header)
     OverlapHeaderFrameLayout flHeader;
-    @Bind(R.id.ll_body)
     OverlapLinearLayout llBody;
-    @Bind(R.id.scroll_root)
     OverlapScrollView scrollRoot;
-    @Bind(R.id.introduce)
     LinearLayout introduce;
-    @Bind(R.id.content0)
     RelativeLayout content0;
-    @Bind(R.id.content1)
     FrameLayout content1;
-    @Bind(R.id.content2)
     FrameLayout content2;
-    @Bind(R.id.content3)
     FrameLayout content3;
-    @Bind(R.id.content4)
     FrameLayout content4;
-    @Bind(R.id.content5)
     FrameLayout content5;
-    @Bind(R.id.tv_header)
     TextView tv_header;
-    @Bind(R.id.layout_in)
     FrameLayout layout_in;
-    @Bind(R.id.logo)
     ImageView logo;
 
 
@@ -74,7 +59,6 @@ public class DetailActivity extends AppCompatActivity implements BaseRecyclerAda
     private final int[] mImageResIds = Constants.IMAGES;
     private final List<Double> mImageAspectRatios = new ArrayList<>();
 
-    @OnClick(R.id.rlOpen)
     void rlOpen() {
         flHeader.open();
         llBody.open();
@@ -84,14 +68,24 @@ public class DetailActivity extends AppCompatActivity implements BaseRecyclerAda
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        ButterKnife.bind(this);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setupEnterAnimation(); // 入场动画
-            setUpExitAnimation();//退出动画
-        } else {
-            initView();
-        }
+        recycleIn = (RecyclerView) findViewById(R.id.recycle_in);
+        rlOpen = (RelativeLayout) findViewById(R.id.rlOpen);
+        flHeader = (OverlapHeaderFrameLayout) findViewById(R.id.fl_header);
+        llBody = (OverlapLinearLayout) findViewById(R.id.ll_body);
+        scrollRoot = (OverlapScrollView) findViewById(R.id.scroll_root);
+        introduce = (LinearLayout) findViewById(R.id.introduce);
+        content0 = (RelativeLayout) findViewById(R.id.content0);
+        content1 = (FrameLayout) findViewById(R.id.content1);
+        content2 = (FrameLayout) findViewById(R.id.content2);
+        content3 = (FrameLayout) findViewById(R.id.content3);
+        content4 = (FrameLayout) findViewById(R.id.content4);
+        content5 = (FrameLayout) findViewById(R.id.content5);
+        tv_header = (TextView) findViewById(R.id.tv_header);
+        layout_in = (FrameLayout) findViewById(R.id.layout_in);
+        logo = (ImageView) findViewById(R.id.logo);
+        rlOpen.setOnClickListener(v -> rlOpen());
+        setupEnterAnimation(); // 入场动画
+        setUpExitAnimation();//退出动画
         initData();
         intListener();
     }

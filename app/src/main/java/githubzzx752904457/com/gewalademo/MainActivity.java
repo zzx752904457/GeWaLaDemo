@@ -18,17 +18,16 @@ import githubzzx752904457.com.gewalademo.adapter.RecyclerViewAdapter;
 public class MainActivity extends AppCompatActivity {
     private RecyclerViewAdapter mAdapter;
 
-    @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
 
         mAdapter = new RecyclerViewAdapter(this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
+        mRecyclerView = (RecyclerView) findViewById(R.id.mRecyclerView);
         mRecyclerView.setLayoutManager(gridLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
